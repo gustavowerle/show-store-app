@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="e_mail">E-mail:</string>
+    <string name="password">Password:</string>
+    <string name="login">Login</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="welcome_to_shoe_store_app">Welcome to Shoe Store App</string>
+    <string name="got_it">Got it!</string>
+    <string name="instruction">Instruction</string>
+    <string name="instruction_message">First things first, this is a simple application that provides you a list of shoes. To add a new shoe you just need to click on the plus button on the main screen.</string>
+    <string name="welcome_message">In this application, you\'ll be able to register all of your shop\'s shoes and see them on a simple list!</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company">Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="description">Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+</resources>

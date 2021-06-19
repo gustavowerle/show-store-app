@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.MainViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Add a new shoe" />
+
+            <TextView
+                android:id="@+id/labelShoeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/shoe_name" />
+
+            <EditText
+                android:id="@+id/editShoeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:text="@={viewModel.shoeName}" />
+
+            <TextView
+                android:id="@+id/labelCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/company" />
+
+            <EditText
+                android:id="@+id/editCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:text="@={viewModel.company}" />
+
+            <TextView
+                android:id="@+id/labelShoeSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/shoe_size" />
+
+            <EditText
+                android:id="@+id/editShoeSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="2"
+                android:text="@={viewModel.shoeSize}" />
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/description" />
+
+            <EditText
+                android:id="@+id/editDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:maxLength="30"
+                android:text="@={viewModel.description}" />
+
+            <Button
+                android:id="@+id/buttonSave"
+                style="@style/button_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="@{() -> viewModel.addShoe()}"
+                android:text="@string/save" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="@style/button_secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="@{() -> viewModel.closeShoeDetail()}"
+                android:text="@string/cancel" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
