@@ -7,6 +7,10 @@ import java.util.*
 
 class MainViewModel : ViewModel() {
 
+    var isLogging = false
+    private var _isLoggedIn = MutableLiveData(false)
+    val isLoggedIn: LiveData<Boolean> get() = _isLoggedIn
+
     private var _shoeList = MutableLiveData<MutableList<String>>(mutableListOf())
     val shoeList: LiveData<MutableList<String>> get() = _shoeList
 
@@ -17,6 +21,13 @@ class MainViewModel : ViewModel() {
     var company = ""
     var shoeSize = ""
     var description = ""
+
+    private fun clearFields() {
+        shoeName = ""
+        company = ""
+        shoeSize = ""
+        description = ""
+    }
 
     fun addShoe() {
         val shoeText =
@@ -34,10 +45,8 @@ class MainViewModel : ViewModel() {
         _closeShoeDetailEvent.value = false
     }
 
-    private fun clearFields() {
-        shoeName = ""
-        company = ""
-        shoeSize = ""
-        description = ""
+    fun doLogin() {
+        isLogging = false
+        _isLoggedIn.value = true
     }
 }

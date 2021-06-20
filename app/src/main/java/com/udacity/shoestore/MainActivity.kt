@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -41,7 +42,10 @@ class MainActivity : AppCompatActivity() {
                 supportActionBar?.hide()
             }
         }
-        navController.navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
+        viewModel.isLoggedIn.observe(this, Observer {
+            if (!it && !viewModel.isLogging)
+                navController.navigate(ShoeListFragmentDirections.actionShoeListFragmentToLoginFragment())
+        })
     }
 
     override fun onSupportNavigateUp(): Boolean {
