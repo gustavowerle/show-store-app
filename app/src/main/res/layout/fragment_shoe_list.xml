@@ -2,6 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- I've chosen ConstraintLayout to align the FloatingActionButton at the bottom.
+     And a LinearLayout inside of the ConstraintLayout to make a list because the layout of the list
+     is a simple vertical layout -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

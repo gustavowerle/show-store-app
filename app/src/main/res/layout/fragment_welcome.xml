@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- I've chosen ConstraintLayout to use chains to align the TextViews
+       in the middle of the screen and the FloatingActionButton at the bottom. And I think
+       I am not able to do this with LinearLayout -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- I've chosen LinearLayout here because it's a simple vertical layout, and this layout is
+     the most efficient type of layout to use in this case -->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
